@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "70219159512",
+    "project_id": "cryptoapp-bbe42",
+    "storage_bucket": "cryptoapp-bbe42.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:70219159512:android:a33f0a4e55525dcf0b84ad",
+        "android_client_info": {
+          "package_name": "com.harunturkoglu.cryptoappsample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "70219159512-43n7538tomk3md3aftp84kq4t5ove5na.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBis9737WurBKnRTc19yAXAdsszZiVVDv4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "70219159512-43n7538tomk3md3aftp84kq4t5ove5na.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

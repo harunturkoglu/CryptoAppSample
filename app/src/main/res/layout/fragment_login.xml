@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clRoot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/yankees_blue">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_app_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textAlignment="center"
+            android:textAppearance="@style/font_bold_32"
+            android:textColor="@color/cultured"
+            app:layout_constraintBottom_toTopOf="@id/view_input_fields_container"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.8" />
+
+        <View
+            android:id="@+id/view_input_fields_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_login_container"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_percent="0.7"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edit_text_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/text_login_email_hint"
+            style="@style/InputTypeEditText"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@id/view_input_fields_container"
+            app:layout_constraintVertical_bias="0.3" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edit_text_password"
+            style="@style/InputTypeEditText"
+            android:layout_width="match_parent"
+            android:hint="@string/text_login_password_Hint"
+            android:inputType="textPassword"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/edit_text_email" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16"
+            android:background="@drawable/bg_login_edittext"
+            android:text="@string/text_login_button"
+            android:textAppearance="@style/font_semibold_16"
+            android:textColor="@color/cultured"
+            app:layout_constraintEnd_toEndOf="@id/edit_text_password"
+            app:layout_constraintTop_toBottomOf="@id/edit_text_password" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_view_register"
+            android:layout_width="wrap_content"
+            app:layout_constraintHorizontal_bias="0"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@id/btn_login"
+            android:text="@string/text_sign_up_button"
+            android:layout_marginStart="@dimen/margin_16"
+            android:textAppearance="@style/font_semibold_16"
+            android:textColor="@color/yankees_blue"
+            app:layout_constraintBottom_toBottomOf="@id/btn_login"
+            app:layout_constraintStart_toStartOf="@id/edit_text_password"
+            app:layout_constraintTop_toTopOf="@id/btn_login" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

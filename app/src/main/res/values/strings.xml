@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Bitcoin Ticker</string>
+
+    <string name="network_error">Please Make Sure You Are Connected To Internet.</string>
+    <string name="unexpected_error">An unexpected error occurred.</string>
+
+    //Home
+    <string name="txt_home_favorites"><u>Favorites</u></string>
+    <string name="txt_home_search_hint">Search with crypto name or symbol..</string>
+
+    //Cryptocurrency
+    <string name="txt_cryptocurrency_usd">USD</string>
+    <string name="txt_cryptocurrency_usd_format">%1$S USD</string>
+
+    //General Dialog
+    <string name="btn_ok">OK</string>
+    <string name="btn_cancel">Cancel</string>
+
+    //Login
+    <string name="text_login_email_hint">Your Email Address</string>
+    <string name="text_login_password_Hint">Your Password</string>
+    <string name="text_login_button">Login</string>
+    <string name="text_sign_up_button"><u>Sign Up</u></string>
+    <string name="text_email_format_error">Please enter a valid Email address.</string>
+    <string name="text_password_format_error">Please give a valid password. Password must be between %1$s-%2$s character length.</string>
+    <string name="text_login_error">Email or password is incorrect..</string>
+    <string name="text_register_successful">Register is successful, you can login and track cryptocurrencies now!</string>
+
+    //Detail
+    <string name="text_detail_rank">Rank:</string>
+    <string name="text_detail_price">Price:</string>
+    <string name="text_detail_usd_format_with_symbol">%1$S $</string>
+    <string name="text_detail_hashing_algorithm">Hashing Algorithm</string>
+    <string name="text_detail_token_address">Token Address</string>
+    <string name="text_detail_market_pair">Market Pair</string>
+    <string name="text_detail_date_added">Date Added</string>
+    <string name="text_detail_price_change_1h">Price Change (1 Hour)</string>
+    <string name="text_detail_price_change_24h">Price Change (24 Hours)</string>
+    <string name="text_detail_price_change_7d">Price Change (7 Days)</string>
+    <string name="text_detail_price_change_30d">Price Change (30 Days)</string>
+    <string name="text_detail_price_change_60d">Price Change (60 Days)</string>
+    <string name="text_detail_price_change_90d">Price Change (90 Days)</string>
+    <string name="text_detail_refresh_internal">Refresh Interval (Milisaniye)</string>
+    <string name="text_detail_refresh_internal_description">Refresh interval value specifies the refresh time of the values on the screen.</string>
+    <string name="text_detail_refresh_internal_error">Please enter a valid value. The entered value cannot be less than 500 milliseconds, which is the minimum response time of the server.</string>
+
+</resources>

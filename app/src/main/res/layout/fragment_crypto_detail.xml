@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="detail"
+            type="com.harunturkoglu.cryptoappsample.data.model.ui.CryptoCurrencyDetailUiModel" />
+        <variable
+            name="viewModel"
+            type="com.harunturkoglu.cryptoappsample.presentation.ui.detail.CryptoDetailViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/yankees_blue">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:paddingHorizontal="@dimen/margin_16"
+            android:paddingVertical="@dimen/margin_32"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_view_name_symbol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{detail.currencyNameSymbol}"
+                android:textAlignment="center"
+                android:textAppearance="@style/font_bold_24"
+                android:textColor="@color/cultured"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="BTC - BTC" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_view_rank_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                android:text="@string/text_detail_rank"
+                android:textAppearance="@style/font_semibold_16"
+                android:textColor="@color/cultured"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_view_name_symbol" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_view_rank"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:text="@{detail.currencyRank}"
+                android:textAlignment="textStart"
+                android:textAppearance="@style/font_regular_16"
+                android:textColor="@color/cultured"
+                app:layout_constraintBottom_toBottomOf="@id/text_view_rank_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/text_view_rank_title"
+                app:layout_constraintTop_toTopOf="@id/text_view_rank_title"
+                tools:text="2" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_view_price_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                android:text="@string/text_detail_price"
+                android:textAppearance="@style/font_semibold_16"
+                android:textColor="@color/cultured"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_view_rank_title" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_view_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:text="@{detail.currentPrice.get(context)}"
+                android:textAlignment="textStart"
+                android:textAppearance="@style/font_regular_16"
+                android:textColor="@color/cultured"
+                app:layout_constraintBottom_toBottomOf="@id/text_view_price_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/text_view_price_title"
+                app:layout_constraintTop_toTopOf="@id/text_view_price_title"
+                tools:text="20.29384y29423423432 $" />
+
+            <com.harunturkoglu.cryptoappsample.presentation.ui.common.component.CurrencyStateComponent
+                android:id="@+id/csc_hashing_algorithm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                app:currencyDescription="@{detail.currencyHashingAlgorithm}"
+                app:currencyTitle="@string/text_detail_hashing_algorithm"
+                app:layout_constraintTop_toBottomOf="@id/text_view_price" />
+
+            <com.harunturkoglu.cryptoappsample.presentation.ui.common.component.CurrencyStateComponent
+                android:id="@+id/csc_token_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                app:currencyDescription="@{detail.currencyTokenAddress}"
+                app:currencyTitle="@string/text_detail_token_address"
+                app:layout_constraintTop_toBottomOf="@id/csc_hashing_algorithm" />
+
+            <com.harunturkoglu.cryptoappsample.presentation.ui.common.component.CurrencyStateComponent
+                android:id="@+id/csc_market_pair"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                app:currencyDescription="@{detail.currencyMarketPair}"
+                app:currencyTitle="@string/text_detail_market_pair"
+                app:layout_constraintTop_toBottomOf="@id/csc_token_address" />
+
+            <com.harunturkoglu.cryptoappsample.presentation.ui.common.component.CurrencyStateComponent
+                android:id="@+id/csc_date_added"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                app:currencyDescription="@{detail.dateAdded}"
+                app:currencyTitle="@string/text_detail_date_added"
+                app:layout_constraintTop_toBottomOf="@id/csc_market_pair" />
+
+            <com.harunturkoglu.cryptoappsample.presentation.ui.common.component.CurrencyStateComponent
+                android:id="@+id/csc_price_change_1h"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                app:currencyDescription="@{detail.priceChange1H}"
+                app:currencyTitle="@string/text_detail_price_change_1h"
+                app:layout_constraintTop_toBottomOf="@id/csc_date_added"
+                app:showCurrencyStateByDescriptionValue="true" />
+
+            <com.harunturkoglu.cryptoappsample.presentation.ui.common.component.CurrencyStateComponent
+                android:id="@+id/csc_price_change_24h"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                app:currencyDescription="@{detail.priceChange24H}"
+                app:currencyTitle="@string/text_detail_price_change_24h"
+                app:layout_constraintTop_toBottomOf="@id/csc_price_change_1h"
+                app:showCurrencyStateByDescriptionValue="true" />
+
+            <com.harunturkoglu.cryptoappsample.presentation.ui.common.component.CurrencyStateComponent
+                android:id="@+id/csc_price_change_7d"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                app:currencyDescription="@{detail.priceChange7D}"
+                app:currencyTitle="@string/text_detail_price_change_7d"
+                app:layout_constraintTop_toBottomOf="@id/csc_price_change_24h"
+                app:showCurrencyStateByDescriptionValue="true" />
+
+            <com.harunturkoglu.cryptoappsample.presentation.ui.common.component.CurrencyStateComponent
+                android:id="@+id/csc_price_change_30d"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                app:currencyDescription="@{detail.priceChange30D}"
+                app:currencyTitle="@string/text_detail_price_change_30d"
+                app:layout_constraintTop_toBottomOf="@id/csc_price_change_7d"
+                app:showCurrencyStateByDescriptionValue="true" />
+
+            <com.harunturkoglu.cryptoappsample.presentation.ui.common.component.CurrencyStateComponent
+                android:id="@+id/csc_price_change_60d"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                app:currencyDescription="@{detail.priceChange60D}"
+                app:currencyTitle="@string/text_detail_price_change_60d"
+                app:layout_constraintTop_toBottomOf="@id/csc_price_change_30d"
+                app:showCurrencyStateByDescriptionValue="true" />
+
+            <com.harunturkoglu.cryptoappsample.presentation.ui.common.component.CurrencyStateComponent
+                android:id="@+id/csc_price_change_90d"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                app:currencyDescription="@{detail.priceChange90D}"
+                app:currencyTitle="@string/text_detail_price_change_90d"
+                app:layout_constraintTop_toBottomOf="@id/csc_price_change_60d"
+                app:showCurrencyStateByDescriptionValue="true" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edit_text_refresh_interval_millis"
+                style="@style/InputTypeEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16"
+                android:maxLength="5"
+                android:text="@{viewModel.refreshIntervalMillis}"
+                android:paddingEnd="@dimen/margin_40"
+                android:background="@drawable/bg_refresh_edittext"
+                android:hint="@string/text_detail_refresh_internal"
+                android:textColor="@color/yankees_blue"
+                android:textColorHint="@color/yankees_blue_50"
+                app:layout_constraintEnd_toStartOf="@id/image_approve"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/csc_price_change_90d" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/margin_8"
+                app:layout_constraintTop_toTopOf="@id/edit_text_refresh_interval_millis"
+                app:layout_constraintBottom_toBottomOf="@id/edit_text_refresh_interval_millis"
+                app:layout_constraintEnd_toEndOf="@id/edit_text_refresh_interval_millis"
+                android:src="@drawable/ic_question_mark"
+                android:id="@+id/image_view_refresh_internal_question_mark"/>
+
+            <ImageButton
+                android:id="@+id/image_approve"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/edit_text_refresh_interval_millis"
+                app:layout_constraintBottom_toBottomOf="@id/edit_text_refresh_interval_millis"
+                android:background="@drawable/bg_button_ok"
+                android:src="@drawable/ic_ok"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

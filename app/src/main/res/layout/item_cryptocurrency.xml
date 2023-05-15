@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="crypto"
+            type="com.harunturkoglu.cryptoappsample.data.model.ui.CryptoCurrencyUiModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?selectableItemBackground"
+        android:id="@+id/cl_root"
+        android:layout_margin="@dimen/margin_16"
+        android:background="@drawable/bg_crypto_item"
+        android:padding="@dimen/margin_8"
+        tools:targetApi="m"
+        tools:ignore="UnusedAttribute">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_name_symbol"
+            android:text="@{crypto.currencySummary.currencyNameSymbol}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/font_regular_16"
+            android:textColor="@color/cultured"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="BTC- BTC" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            android:text="@{crypto.currencySummary.currencyPrice.get(context)}"
+            android:textAppearance="@style/font_regular_16"
+            android:textColor="@color/cultured"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_name_symbol"
+            tools:text="1.0072342423 USD" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_24h_change"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@{crypto.currencySummary.currency24hChangeDrawableResId}"
+            app:layout_constraintBottom_toBottomOf="@id/tv_24h_change"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_24h_change" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_24h_change"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            textColorRes="@{crypto.currencySummary.currency24hChangeTextColorResId}"
+            android:text="@{crypto.currencySummary.currency24hChange}"
+            android:layout_marginTop="@dimen/margin_8"
+            android:textAppearance="@style/font_semibold_16"
+            app:layout_constraintStart_toEndOf="@id/iv_24h_change"
+            app:layout_constraintTop_toBottomOf="@id/tv_price"
+            tools:text="-5.30423" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_ext_24h_change"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/tv_24h_change"
+            android:layout_marginStart="@dimen/margin_4"
+            android:text="@string/txt_cryptocurrency_usd"
+            android:textAppearance="@style/font_semibold_16"
+            android:textColor="@color/cultured"
+            app:layout_constraintStart_toEndOf="@id/tv_24h_change"
+            app:layout_constraintTop_toTopOf="@id/tv_24h_change" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_rank"
+            android:layout_width="wrap_content"
+            android:text="@{crypto.currencySummary.currencyRank}"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_8"
+            android:textAppearance="@style/font_semibold_24"
+            android:textColor="@color/cultured"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="6" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/wh_2"
+            android:layout_marginTop="@dimen/margin_8"
+            android:background="@color/naples_yellow"
+            app:layout_constraintTop_toBottomOf="@id/tv_24h_change"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    //Component Attributes
+    <declare-styleable name="CurrencyStateComponent">
+        <attr name="currencyTitle" format="string" />
+        <attr name="currencyDescription" format="string" />
+        <attr name="showCurrencyStateByDescriptionValue" format="boolean" />
+    </declare-styleable>
+
+</resources>

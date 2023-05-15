@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Bitcoin Ticker</string>
+
+    <string name="network_error">Lütfen internete bağlandığınızdan emin olun.</string>
+    <string name="unexpected_error">Beklenmeyen bir hata oluştu.</string>
+
+    //Home
+    <string name="txt_home_favorites"><u>Favoriler</u></string>
+    <string name="txt_home_search_hint">Kripto isim veya sembolü ile arama yapın..</string>
+
+
+    //Cryptocurrency
+    <string name="txt_cryptocurrency_usd">USD</string>
+    <string name="txt_cryptocurrency_usd_format">%1$S USD</string>
+
+    //General Dialog
+    <string name="btn_ok">Tamam</string>
+    <string name="btn_cancel">İptal</string>
+
+    //Login
+    <string name="text_login_email_hint">Email Adresiniz</string>
+    <string name="text_login_password_Hint">Şifreniz</string>
+    <string name="text_login_button">Giriş</string>
+    <string name="text_sign_up_button"><u>Kayıt Ol</u></string>
+    <string name="text_email_format_error">Lütfen geçerli bir EMail adresi giriniz.</string>
+    <string name="text_password_format_error">Lütfen geçerli bir şifre giriniz. Şifre %1$i-%2$i karakter aralığında olmalıdır.</string>
+    <string name="text_login_error">Email veya şifre hatalı.</string>
+    <string name="text_register_successful">Kayıt işlemi başarılı, şimdi uygulamaya girebilir ve kripto paraları takip edebilirsiniz!</string>
+
+    //Detail
+    <string name="text_detail_rank">Rank:</string>
+    <string name="text_detail_price">Fiyat:</string>
+    <string name="text_detail_usd_format_with_symbol">%1$S $</string>
+    <string name="text_detail_hashing_algorithm">Hash Algoritması</string>
+    <string name="text_detail_token_address">Token Adresi</string>
+    <string name="text_detail_market_pair">Market Pair</string>
+    <string name="text_detail_date_added">Eklenme Tarihi</string>
+    <string name="text_detail_price_change_1h">Fiyat Değişimi (1 Saat)</string>
+    <string name="text_detail_price_change_24h">Fiyat Değişimi (24 Saat)</string>
+    <string name="text_detail_price_change_7d">Fiyat Değişimi (7 Gün)</string>
+    <string name="text_detail_price_change_30d">Fiyat Değişimi (30 Gün)</string>
+    <string name="text_detail_price_change_60d">Fiyat Değişimi (60 Gün)</string>
+    <string name="text_detail_price_change_90d">Fiyat Değişimi (90 Gün)</string>
+    <string name="text_detail_refresh_internal">Yenileme Aralığı (Milisaniye)</string>
+    <string name="text_detail_refresh_internal_description">Yenileme aralığı değeri ekrandaki değerlerin yenilenme süresini belirtir.</string>
+    <string name="text_detail_refresh_internal_error">Geçerli bir değer giriniz. Girilen değer sunucunun minimim response süresi olan 500 milisaniyeden düşük olamaz.</string>
+
+
+
+</resources>

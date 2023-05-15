@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="attrs"
+            type="com.harunturkoglu.cryptoappsample.presentation.ui.common.dialog.GeneralButtonAttrs" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_16"
+        android:background="@drawable/bg_dialog_general"
+        android:padding="@dimen/margin_24">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title"
+            isVisible="@{attrs.titleVisible}"
+            android:text="@{attrs.titleText}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/font_semibold_16"
+            android:textColor="@color/cultured"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Title" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_desc"
+            android:layout_width="wrap_content"
+            android:text="@{attrs.descriptionText}"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            android:paddingHorizontal="@dimen/margin_8"
+            android:textAppearance="@style/font_semibold_16"
+            android:textColor="@color/cultured"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            tools:text="Description" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@{attrs.imageResId}"
+            android:layout_marginTop="@dimen/margin_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_desc" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:id="@+id/btn_positive"
+            tools:text="OK"
+            isVisible="@{attrs.positiveButtonVisible}"
+            android:text="@{attrs.positiveButtonText}"
+            android:textAllCaps="false"
+            android:textColor="@color/yankees_blue"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_btn_positive"
+            android:layout_marginHorizontal="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_24"
+            app:layout_constraintTop_toBottomOf="@id/iv_dialog"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:id="@+id/btn_negative"
+            isVisible="@{attrs.negativeButtonVisible}"
+            android:text="@{attrs.negativeButtonText}"
+            tools:text="Cancel"
+            android:textColor="@color/cultured"
+            android:textAllCaps="false"
+            android:background="@drawable/bg_btn_negative"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_8"
+            app:layout_constraintTop_toBottomOf="@id/btn_positive"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
